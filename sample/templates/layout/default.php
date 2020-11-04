@@ -36,33 +36,31 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-nav">
-      <!-- <a href="/jobpop/php/index.php"><img src="/jobpop/img/logo.png" alt="jobpop"></a>
-      <ul>
-        <li><a href="/jobpop/php/index.php">Home</a></li>
-        <li><a href="/jobpop/php/whats.php">What's</a></li>
-        <li><a href="/jobpop/php/company.php">Company</a></li>
-        <li><a href="/jobpop/php/recruit.php">Recruit</a></li>
-        <li><a href="/jobpop/php/qa/index.php">Q&A</a></li>
-        <li><a href="/jobpop/php/access.php">Access</a></li>
-        <li><a href="/jobpop/php/blog.php">Blog</a></li>
-        <li><a href="/jobpop/php/contact/index.php/">Contact</a></li>
-      </ul> -->
-        <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
-        </div>
-        <div class="top-nav-links">
-            <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
-            <a target="_blank" rel="noopener" href="https://api.cakephp.org/4/">API</a>
-        </div>
-    </nav>
-    <main class="main">
-        <div class="container">
-            <?= $this->Flash->render() ?>
-            <?= $this->fetch('content') ?>
-        </div>
-    </main>
-    <footer>
-    </footer>
+    <div class="wrapper">
+        <nav class="top-nav">
+          <a href="index.php"><img src="/sample/webroot/img/logo.png" alt="jobpop"></a>
+          <ul>
+            <li><a href="/jobpop/php/index.php">Home</a></li>
+            <li><a href="/jobpop/php/whats.php">What's</a></li>
+            <li><a href="/jobpop/php/company.php">Company</a></li>
+            <li><a href="/jobpop/php/recruit.php">Recruit</a></li>
+            <li><a href="/jobpop/php/qa/index.php">Q&A</a></li>
+            <li><a href="/jobpop/php/access.php">Access</a></li>
+            <li><a href="/jobpop/php/blog.php">Blog</a></li>
+            <li><a href="/jobpop/php/contact/index.php/">Contact</a></li>
+          </ul>
+        </nav>
+        <main class="main">
+            <div class="container">
+                <?= $this->Flash->render() ?>
+                <?= $this->fetch('content') ?>
+            </div>
+        </main>
+        <footer>
+            <a href="#">
+              <p>Powerd by SIGNAL Co.Ltd</p>
+            </a>
+        </footer>
+    </div>
 </body>
 </html>
