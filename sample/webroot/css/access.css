@@ -1,0 +1,11 @@
+#map{
+	background-color: #eeffff;
+	padding: 30px;
+	margin-bottom: 80px;
+}
+#map h2{
+	font-weight: bold;
+}
+#map p{
+	font-size: 13px;
+}

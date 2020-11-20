@@ -39,6 +39,7 @@ nav{
 	margin-bottom: 5px;
 	background-size: 100%;
 	background-repeat: no-repeat;
+	cursor: pointer;
 }
 .text{
 	font-size: 10px;

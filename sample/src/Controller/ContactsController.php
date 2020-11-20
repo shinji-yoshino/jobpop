@@ -104,6 +104,31 @@ class ContactsController extends AppController
 
     public function top()
     {
-        
+
+    }
+
+    public function whats()
+    {
+
+    }
+
+    public function company()
+    {
+
+    }
+
+    public function recruit()
+    {
+
+    }
+
+    public function qa()
+    {
+
+    }
+
+    public function access()
+    {
+
     }
 }

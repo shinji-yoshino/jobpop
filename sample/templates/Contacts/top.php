@@ -21,37 +21,27 @@
   <img src="/sample/webroot/img/title.png" alt="title">
   <nav>
     <div class="block">
-      <a href="whats.php">
-        <div class="button"></div>
-      </a>
+      <div class="button"></div>
       <p class="text">ジョブポップとはこういう会社です。</p>
       <p class="more">more</p>
     </div>
     <div class="block">
-      <a href="company.php">
-        <div class="button"></div>
-      </a>
+      <div class="button"></div>
       <p class="text">会社概要</p>
       <p class="more">more</p>
     </div>
     <div class="block">
-      <a href="recruit.php">
-        <div class="button"></div>
-      </a>
+      <div class="button"></div>
       <p class="text">随時スタッフ募集しています。</p>
       <p class="more">more</p>
     </div>
     <div class="block">
-      <a href="qa.php">
-        <div class="button"></div>
-      </a>
+      <div class="button"></div>
       <p class="text">よくある質問Q&A</p>
       <p class="more">more</p>
     </div>
     <div class="block">
-      <a href="contact.php">
-        <div class="button"></div>
-      </a>
+      <div class="button"></div>
       <p class="text">ジョブポップへのお問い合せ</p>
       <p class="more">more</p>
     </div>
@@ -80,6 +70,30 @@ function fade(){
 }
 
 for (var i = 0; i < 5; i++) {
-    $(".block").eq(i).find(".button").css("background-image", "url(../img/btn0" + (i+1) + ".png)")
+    $(".block").eq(i).find(".button").css("background-image", "url(/sample/webroot/img/btn0" + (i+1) + ".png)")
 }
+$(".button").on("click", function(){
+  var num = $(this).parent().index()
+  switch (num) {
+    case 0:
+      location.href = "/sample/contacts/whats"
+      break;
+
+    case 1:
+      window.location.href = "/sample/contacts/company"
+      break;
+
+    case 2:
+      window.location.href = "/sample/contacts/recruit"
+      break;
+
+    case 3:
+      window.location.href = "/sample/contacts/qa/index.php"
+      break;
+
+    case 4:
+      window.location.href = "/sample/contacts/contact"
+      break;
+  }
+})
 </script>
