@@ -38,16 +38,16 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
     <div class="wrapper">
         <nav class="top-nav">
-          <a href="index.php"><img src="/sample/webroot/img/logo.png" alt="jobpop"></a>
+          <a href="/sample/contacts/top"><img src="/sample/webroot/img/logo.png" alt="jobpop"></a>
           <ul>
-            <li><a href="/jobpop/php/index.php">Home</a></li>
-            <li><a href="/jobpop/php/whats.php">What's</a></li>
-            <li><a href="/jobpop/php/company.php">Company</a></li>
-            <li><a href="/jobpop/php/recruit.php">Recruit</a></li>
-            <li><a href="/jobpop/php/qa/index.php">Q&A</a></li>
-            <li><a href="/jobpop/php/access.php">Access</a></li>
-            <li><a href="/jobpop/php/blog.php">Blog</a></li>
-            <li><a href="/jobpop/php/contact/index.php/">Contact</a></li>
+            <li><a href="/sample/contacts/top">Home</a></li>
+            <li><a href="/sample/contacts/whats">What's</a></li>
+            <li><a href="/sample/contacts/company">Company</a></li>
+            <li><a href="/sample/contacts/recruit">Recruit</a></li>
+            <li><a href="/sample/contacts/qa/index.php">Q&A</a></li>
+            <li><a href="/sample/contacts/access">Access</a></li>
+            <li><a href="/sample/contacts/blog">Blog</a></li>
+            <li><a href="/sample/contacts/index">Contact</a></li>
           </ul>
         </nav>
         <main class="main">
