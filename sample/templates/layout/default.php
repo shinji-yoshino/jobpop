@@ -14,7 +14,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'JOBPOP 特定労働者派遣事業 東京都豊島区東池袋';
 ?>
 <!DOCTYPE html>
 <html>

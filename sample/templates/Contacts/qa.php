@@ -14,12 +14,12 @@
 <section>
   <h1>Q&A</h1>
   <div class="qa">
-    <a href="registrant.php">
+    <a href="qa1">
       <img src="/sample/webroot/img/registrant.png" alt="registrant">
     </a>
   </div>
   <div class="qa">
-    <a href="company.php">
+    <a href="qa2">
       <img src="/sample/webroot/img/company_qa.png" alt="company_qa">
     </a>
   </div>

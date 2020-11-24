@@ -1,7 +1,7 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \Cake\Datasource\EntityInterface[]|\Cake\Collection\CollectionInterface $contacts
+ * @var \Cake\Datasource\EntityInterface $contact
  */
 ?>
 <head>
@@ -11,41 +11,43 @@
 
 </head>
 
-<div id="top">
-  <img src="/sample/webroot/img/main_img.jpg" alt="main">
-  <img id="copy1" src="/sample/webroot/img/catchcopy.png" alt="copy1">
-  <img id="copy2" src="/sample/webroot/img/catchcopy2.png" alt="copy2">
-</div>
+<div class="default">
+  <div id="top">
+    <img src="/sample/webroot/img/main_img.jpg" alt="main">
+    <img id="copy1" src="/sample/webroot/img/catchcopy.png" alt="copy1">
+    <img id="copy2" src="/sample/webroot/img/catchcopy2.png" alt="copy2">
+  </div>
 
-<div id="home">
-  <img src="/sample/webroot/img/title.png" alt="title">
-  <nav>
-    <div class="block">
-      <div class="button"></div>
-      <p class="text">ジョブポップとはこういう会社です。</p>
-      <p class="more">more</p>
-    </div>
-    <div class="block">
-      <div class="button"></div>
-      <p class="text">会社概要</p>
-      <p class="more">more</p>
-    </div>
-    <div class="block">
-      <div class="button"></div>
-      <p class="text">随時スタッフ募集しています。</p>
-      <p class="more">more</p>
-    </div>
-    <div class="block">
-      <div class="button"></div>
-      <p class="text">よくある質問Q&A</p>
-      <p class="more">more</p>
-    </div>
-    <div class="block">
-      <div class="button"></div>
-      <p class="text">ジョブポップへのお問い合せ</p>
-      <p class="more">more</p>
-    </div>
-  </nav>
+  <div id="home">
+    <img src="/sample/webroot/img/title.png" alt="title">
+    <nav>
+      <div class="block">
+        <div class="button"></div>
+        <p class="text">ジョブポップとはこういう会社です。</p>
+        <p class="more">more</p>
+      </div>
+      <div class="block">
+        <div class="button"></div>
+        <p class="text">会社概要</p>
+        <p class="more">more</p>
+      </div>
+      <div class="block">
+        <div class="button"></div>
+        <p class="text">随時スタッフ募集しています。</p>
+        <p class="more">more</p>
+      </div>
+      <div class="block">
+        <div class="button"></div>
+        <p class="text">よくある質問Q&A</p>
+        <p class="more">more</p>
+      </div>
+      <div class="block">
+        <div class="button"></div>
+        <p class="text">ジョブポップへのお問い合せ</p>
+        <p class="more">more</p>
+      </div>
+    </nav>
+  </div>
 </div>
 
 <script>

@@ -49,9 +49,7 @@ class ContactsController extends AppController
         if ($this->request->is('post')) {
             $contact = $this->Contacts->patchEntity($contact, $this->request->getData());
             if ($this->Contacts->save($contact)) {
-                $this->Flash->success(__('The contact has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'add']);
             }
             $this->Flash->error(__('The contact could not be saved. Please, try again.'));
         }
@@ -73,7 +71,7 @@ class ContactsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $contact = $this->Contacts->patchEntity($contact, $this->request->getData());
             if ($this->Contacts->save($contact)) {
-                $this->Flash->success(__('The contact has been saved.'));
+                $this->Flash->success(__('更新しました'));
 
                 return $this->redirect(['action' => 'index']);
             }
@@ -94,7 +92,7 @@ class ContactsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $contact = $this->Contacts->get($id);
         if ($this->Contacts->delete($contact)) {
-            $this->Flash->success(__('The contact has been deleted.'));
+            $this->Flash->success(__('削除しました'));
         } else {
             $this->Flash->error(__('The contact could not be deleted. Please, try again.'));
         }
@@ -102,33 +100,44 @@ class ContactsController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-    public function top()
-    {
+        public function top()
+        {
 
-    }
+        }
 
-    public function whats()
-    {
+        public function whats()
+        {
 
-    }
+        }
 
-    public function company()
-    {
+        public function company()
+        {
 
-    }
+        }
 
-    public function recruit()
-    {
+        public function recruit()
+        {
 
-    }
+        }
 
-    public function qa()
-    {
+        public function qa()
+        {
 
-    }
+        }
 
-    public function access()
-    {
+        public function qa1()
+        {
 
-    }
+        }
+
+        public function qa2()
+        {
+
+        }
+
+        public function access()
+        {
+
+        }
+
 }

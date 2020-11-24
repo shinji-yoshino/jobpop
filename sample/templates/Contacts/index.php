@@ -5,6 +5,37 @@
  */
 ?>
 
+<head>
+    <?= $this->Html->css(['index']) ?>
+    <?= $this->Html->script('jquery', array( 'inline' => false )) ?>
+    <script>
+      function check(){
+        if (document.form.name.value == "") {
+          alert("必須項目を入力してください")
+          return false
+        }
+        if (document.form.kana.value == "") {
+          alert("必須項目を入力してください")
+          return false
+        }
+        if (document.form.address.value == "") {
+          alert("必須項目を入力してください")
+          return false
+        }
+        if (document.form.content.value == "") {
+          alert("必須項目を入力してください")
+          return false
+        }
+
+        if (window.confirm("送信してよろしいですか?")) {
+          return true
+        }else{
+          return false
+        }
+      }
+    </script>
+</head>
+
 <div class="contacts index content">
     <section>
       <h1>contact</h1>
@@ -13,7 +44,7 @@
         <p>送信頂いた件につきましては、当社より折り返しご連絡を差し上げます。</p>
         <p>なお、ご連絡までに、お時間を頂く場合もございますので予めご了承ください。</p>
         <p><span style="color: red">*</span>は必須項目となります。</p>
-        <form name="form" action="thanks/confirm.php" method="post" onsubmit="return check()">
+        <form name="form" action="add" method="post" onsubmit="return check()">
           <dl class="clearfix">
             <dt>氏名<span style="color: red">*</span></dt>
             <dd>
@@ -67,20 +98,18 @@
           <td><?= h($contact->address) ?></td>
           <td><?= h($contact->created) ?></td>
           <td><?= h($contact->modified) ?></td>
-          <td class="actions">
-              <?= $this->Html->link(__('Edit'), ['action' => 'edit', $contact->id]) ?>
-              <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $contact->id], ['confirm' => __('Are you sure you want to delete # {0}?', $contact->id)]) ?>
-          </td>
           <td>
             <form action="../update/confirm.php" method="post">
               <!-- <php require("connect/hidden.php"); ?> -->
               <input type="submit" name="submit" value="更 新" class="update">
+              <?= $this->Html->link(__('Edit'), ['action' => 'edit', $contact->id]) ?>
             </form>
           </td>
           <td>
             <form action="delete/confirm.php" method="post">
               <!-- <php require("connect/hidden.php"); ?> -->
               <input type="submit" name="submit" value="削 除" class="delete">
+              <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $contact->id], ['confirm' => __('{0}を本当に削除してよろしいですか?', $contact->id)]) ?>
             </form>
           </td>
         </tr>
