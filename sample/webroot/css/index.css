@@ -30,15 +30,15 @@ dd input{
 	font-size: 16px;
 	margin: 5px 0;
 }
-dd textarea{
+#content{
 	resize: none;
 	width: 645px;
 	height: 200px;
 	margin: 5px 0;
 }
-#btn{
+button{
 	display: block;
-	width: 100px;
+	width: 80px;
 	font-size: 16px;
 	margin: 20px auto;
 	cursor: pointer;
@@ -56,10 +56,10 @@ dd textarea{
 	width: 100%;
 }
 #border1{
-	border-bottom: thin solid #000;
+	border-bottom: 1px solid #000000;
 }
 .border2{
-	border-bottom: thin solid #c0c0c0;
+	border-bottom: 1px solid #c0c0c0;
 }
 #deta th{
 	font-weight: bold;
@@ -72,18 +72,29 @@ dd textarea{
 	border-radius: 3px;
 	cursor: pointer;
 	font-size: 10px;
+	text-align: center;
+	line-height: 20px;
+}
+.update a{
 	color: white;
 }
 .delete{
 	width: 40px;
 	height: 20px;
-	background-color: red;
+	background-color: #ff0000;
 	border-radius: 3px;
 	cursor: pointer;
 	font-size: 10px;
+	text-align: center;
+	line-height: 20px;
+}
+.delete a{
 	color: white;
 }
 .update:hover, .delete:hover{
 	background-color: #c0c0c0;
-	color: black;
+}
+.float{
+	float: left;
+	margin-right: 2px;
 }

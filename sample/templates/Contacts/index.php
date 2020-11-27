@@ -44,33 +44,33 @@
         <p>送信頂いた件につきましては、当社より折り返しご連絡を差し上げます。</p>
         <p>なお、ご連絡までに、お時間を頂く場合もございますので予めご了承ください。</p>
         <p><span style="color: red">*</span>は必須項目となります。</p>
-        <form name="form" action="add" method="post" onsubmit="return check()">
-          <dl class="clearfix">
-            <dt>氏名<span style="color: red">*</span></dt>
-            <dd>
-              <input type="text" name="name">
-            </dd>
-            <dt>フリガナ<span style="color: red">*</span></dt>
-            <dd>
-              <input type="text" name="kana">
-            </dd>
-            <dt>電話番号</dt>
-            <dd>
-              <input type="text" name="tel">
-            </dd>
-            <dt>メールアドレス<span style="color: red">*</span></dt>
-            <dd>
-              <input type="text" name="address">
-            </dd>
-          </dl>
-          <h2 class="title">1.お問い合わせ内容をご記入ください<span style="color: red">*</span></h2>
-          <dl class="clearfix">
-            <dd>
-              <textarea name="content"></textarea>
-            </dd>
-            <input type="submit" name="submit" value="送　信" id="btn">
-          </dl>
-        </form>
+        <?= $this->Form->create($contact) ?>
+        <dl class="clearfix">
+          <dt>氏名<span style="color: red">*</span></dt>
+          <dd>
+            <?= $this->Form->control('name'); ?>
+          </dd>
+          <dt>フリガナ<span style="color: red">*</span></dt>
+          <dd>
+            <?= $this->Form->control('kana'); ?>
+          </dd>
+          <dt>電話番号</dt>
+          <dd>
+            <?= $this->Form->control('tel'); ?>
+          </dd>
+          <dt>メールアドレス<span style="color: red">*</span></dt>
+          <dd>
+            <?= $this->Form->control('address'); ?>
+          </dd>
+        </dl>
+        <h2 class="title">1.お問い合わせ内容をご記入ください<span style="color: red">*</span></h2>
+        <dl class="clearfix">
+          <dd>
+            <?= $this->Form->control('content'); ?>
+          </dd>
+          <?= $this->Form->button(__('送　信')) ?>
+        </dl>
+        <?= $this->Form->end() ?>
       </div>
     </section>
 
@@ -86,8 +86,6 @@
           <th><?= $this->Paginator->sort('created') ?></th>
           <th><?= $this->Paginator->sort('modified') ?></th>
           <th class="actions"><?= __('Actions') ?></th>
-          <th></th>
-          <th></th>
         </tr>
         <?php foreach ($contacts as $contact): ?>
         <tr class="border2">
@@ -99,18 +97,12 @@
           <td><?= h($contact->created) ?></td>
           <td><?= h($contact->modified) ?></td>
           <td>
-            <form action="../update/confirm.php" method="post">
-              <!-- <php require("connect/hidden.php"); ?> -->
-              <input type="submit" name="submit" value="更 新" class="update">
-              <?= $this->Html->link(__('Edit'), ['action' => 'edit', $contact->id]) ?>
-            </form>
-          </td>
-          <td>
-            <form action="delete/confirm.php" method="post">
-              <!-- <php require("connect/hidden.php"); ?> -->
-              <input type="submit" name="submit" value="削 除" class="delete">
-              <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $contact->id], ['confirm' => __('{0}を本当に削除してよろしいですか?', $contact->id)]) ?>
-            </form>
+            <div class="update float">
+              <?= $this->Html->link(__('更 新'), ['action' => 'edit', $contact->id]) ?>
+            </div>
+            <div class="delete float">
+              <?= $this->Form->postLink(__('削 除'), ['action' => 'delete', $contact->id], ['confirm' => __('{0}を本当に削除してよろしいですか?', $contact->id)]) ?>
+            </div>
           </td>
         </tr>
       <?php endforeach; ?>

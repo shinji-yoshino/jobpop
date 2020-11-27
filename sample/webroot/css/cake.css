@@ -26,6 +26,7 @@ a {
     color:#2f85ae;
     -webkit-transition:all 0.2s linear;
     transition:all 0.2s linear;
+    text-decoration: none;
 }
 
 a:hover,
@@ -90,6 +91,9 @@ footer a p{
 	font-size: 12px;
 	color: #333;
 	padding: 10px;
+}
+label{
+	display: none;
 }
 /* Nav bar */
 .top-nav {
